@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Snake Game - Vitor Veiga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MENU INICIAL -->
+    <div id="menuContainer" class="menu-container">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="left-column">
+            <h1>Snake Portfolio - Vitor Veiga</h1>
+            <p>Engenheiro Agrônomo | Pós-graduado em Cyber Segurança & IA</p>
+            <p>Desenvolvedor de Games & Python | 46 anos</p>
+
+            <!-- Botões do menu -->
+            <button id="startButton" class="menu-button">Iniciar Jogo</button>
+            <button id="projectsButton" class="menu-button">Ver Projetos</button>
+            <button id="restartButton" class="menu-button" style="display:none;">Reiniciar Jogo</button>
+
+            <!-- Links para contato -->
+            <a href="https://www.instagram.com/vitor.veiga.neto" target="_blank" class="menu-button">Instagram</a>
+            <a href="https://wa.me/5581992512747" target="_blank" class="menu-button">WhatsApp</a>
+            <a href="mailto:vitor.veiga.neto46@gmail.com" class="menu-button">Email</a>
+
+            <!-- Foto de perfil -->
+            <img src="img/vitor.jpg" alt="Vitor Veiga" class="profile-pic">
+        </div>
+
+    </div>
+
+    <!-- MÚSICA DE FUNDO -->
+    <audio id="bgMusic" loop>
+        <source src="musicas/Do Treino A Glória(MP3_160K).mp3" type="audio/mpeg">
+    </audio>
+
+<!-- ÁREA DO JOGO -->
+<div id="gameContainer" class="game-container" style="display: none;">
+
+    <!-- O Canvas do jogo Snake -->
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <!-- CONTROLES PARA MOBILE -->
+    <div id="mobileControls" class="mobile-controls" style="display: none; margin-top: 10px;">
+
+        <!-- Botão para cima -->
+        <button id="upBtn" class="control-btn">↑</button>
+
+        <div class="middle-controls">
+            <!-- Botão para esquerda -->
+            <button id="leftBtn" class="control-btn">←</button>
+
+            <!-- Botão para baixo -->
+            <button id="downBtn" class="control-btn">↓</button>
+
+            <!-- Botão para direita -->
+            <button id="rightBtn" class="control-btn">→</button>
+        </div>
+    </div>
+</div>
+
+    <!-- MODAL DE VÍDEO (USANDO IFRAME PARA GOOGLE DRIVE PREVIEW) -->
+    <div id="videoModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- O conteúdo do vídeo (iframe) será inserido via JS -->
+        </div>
+    </div>
+
+    <!-- HUD DO JOGO -->
+    <div id="hud" class="hud" style="display:none;">
+        <p>Pontuação: <span id="scoreDisplay">0</span> | Nível: <span id="levelDisplay">1</span></p>
+    </div>
+
+    <!-- SCRIPT DO JOGO -->
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
